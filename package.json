@@ -9,7 +9,8 @@
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=e3b00f720561"
   },
   "repository": {
     "type": "git",
@@ -54,6 +55,7 @@
     "@typescript-eslint/parser": "^4.29.3",
     "babel-loader": "^8.2.2",
     "babel-plugin-emotion": "^11.0.0",
+    "chromatic": "^5.9.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.1",
