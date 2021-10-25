@@ -2,6 +2,10 @@ import React, { FC } from 'react'
 import styled from '@emotion/styled'
 
 export interface CellProps {
+  x: number
+  y: number
+  cellId: string
+  np: number
   alive: boolean
   aliveColor: string
   deadColor: string
@@ -15,6 +19,15 @@ const CellItem = styled.div`
   height: 30px;
 `
 
-export const Cell: FC<CellProps> = ({ alive, aliveColor, ...rest }) => {
-  return <CellItem></CellItem>
+export const Cell: FC<CellProps> = ({ x, y, cellId, np, onClick }) => {
+  return (
+    <CellItem
+      data-testid={cellId}
+      id={cellId}
+      onClick={() => onClick(x, y)}
+      role="CellItem"
+    >
+      {np}
+    </CellItem>
+  )
 }

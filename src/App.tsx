@@ -12,6 +12,10 @@ export const App = () => {
         onClick={function (x: number, y: number): void {
           throw new Error('Function not implemented.')
         }}
+        x={0}
+        y={0}
+        cellId={''}
+        np={0}
       ></Cell>
     </div>
   )
