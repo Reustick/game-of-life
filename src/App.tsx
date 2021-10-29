@@ -1,22 +1,23 @@
-import { Cell } from 'components/Cell'
-import React from 'react'
+import React, { useState } from 'react'
+import { Grid } from 'components/Grid'
 
 export const App = () => {
+  const [selectCell, setSelectCell] = useState({ x: 0, y: 0 })
+  const rows = 10
+  const columns = 10
+
+  const cl = (x: number, y: number): void => {
+    console.log('x: ' + x + ', y: ' + y)
+    setSelectCell({ x, y })
+  }
+
   return (
     <div>
-      <h1>Game of life</h1>
-      <Cell
-        alive={false}
-        aliveColor={''}
-        deadColor={''}
-        onClick={function (x: number, y: number): void {
-          throw new Error('Function not implemented.')
-        }}
-        x={0}
-        y={0}
-        cellId={''}
-        np={0}
-      ></Cell>
+      <Grid x={rows} y={columns} onClick={cl} />
+      <div>
+        Выбрана ячейка с координатами:{' '}
+        {`x: ${selectCell.x + 1}, y: ${selectCell.y + 1}`}
+      </div>
     </div>
   )
 }

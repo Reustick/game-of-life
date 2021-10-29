@@ -8,9 +8,8 @@ export interface GridProps {
   onClick: (x: number, y: number) => void
 }
 
-export const Grid: FC<GridProps> = ({ x, y, onClick }) => {
+export const Grid: FC<GridProps> = ({ x, y, onClick }: GridProps) => {
   const matrix: Array<ReactElement> = []
-  const width: number = y * 32
   let k: number = 1
 
   for (let i = 0; i < x; i++) {
@@ -24,24 +23,21 @@ export const Grid: FC<GridProps> = ({ x, y, onClick }) => {
           key={cellId}
           onClick={() => onClick(i, j)}
           np={k}
-          alive={false}
           aliveColor={''}
           deadColor={''}
+          oldColor={''}
         />
       )
       k++
     }
   }
-  return (
-    <div>
-      <div>Компонент Field</div>
-      <div style={{ width: width, lineHeight: 0.5 }}>{matrix}</div>
-    </div>
-  )
+  return <Wrapper>{matrix}</Wrapper>
 }
 
-// const GridItem = styled.div`
-//   display: grid;
-//   width: max-content;
-//   padding: 1vw;
-// `
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  width: max-content;
+  padding: 1vw;
+  margin: 0 auto;
+`

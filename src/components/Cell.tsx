@@ -6,8 +6,8 @@ export interface CellProps {
   y: number
   cellId: string
   np: number
-  alive: boolean
   aliveColor: string
+  oldColor: string
   deadColor: string
   onClick: (x: number, y: number) => void
 }
@@ -15,11 +15,17 @@ export interface CellProps {
 const CellItem = styled.div`
   background-color: hotpink;
   padding: 10px 20px 20px 10px;
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
 `
 
-export const Cell: FC<CellProps> = ({ x, y, cellId, np, onClick }) => {
+export const Cell: FC<CellProps> = ({
+  x,
+  y,
+  cellId,
+  np,
+  onClick,
+}: CellProps) => {
   return (
     <CellItem
       data-testid={cellId}
