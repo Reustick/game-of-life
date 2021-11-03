@@ -10,7 +10,7 @@ export interface GridProps {
 
 export const Grid: FC<GridProps> = ({ x, y, onClick }: GridProps) => {
   const matrix: Array<ReactElement> = []
-  let k: number = 1
+  let cellCounter: number = 1
 
   for (let i = 0; i < x; i++) {
     for (let j = 0; j < y; j++) {
@@ -22,13 +22,13 @@ export const Grid: FC<GridProps> = ({ x, y, onClick }: GridProps) => {
           cellId={cellId}
           key={cellId}
           onClick={() => onClick(i, j)}
-          np={k}
+          cellNumber={cellCounter}
           aliveColor={''}
           deadColor={''}
           oldColor={''}
         />
       )
-      k++
+      cellCounter++
     }
   }
   return <Wrapper>{matrix}</Wrapper>
