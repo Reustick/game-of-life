@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid } from 'components/Grid'
+import { Grid } from '@/components/Grid'
 
 export const App = () => {
   const [selectCell, setSelectCell] = useState({ x: 0, y: 0 })
