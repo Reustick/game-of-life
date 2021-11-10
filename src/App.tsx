@@ -12,7 +12,7 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <div role="app">
       <Grid x={rows} y={columns} onClick={cl} />
       <div>
         Выбрана ячейка с координатами:{' '}

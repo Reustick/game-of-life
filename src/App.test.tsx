@@ -6,6 +6,7 @@ import { App } from './App'
 describe('App', () => {
   test('renders App component', () => {
     render(<App />)
-    screen.debug()
+    expect(screen.getByRole('app')).toBeInTheDocument()
+    expect(screen.getAllByRole('CellItem')).toHaveLength(100)
   })
 })
