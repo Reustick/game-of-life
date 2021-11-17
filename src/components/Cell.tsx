@@ -12,7 +12,7 @@ export interface CellProps {
   onClick: (x: number, y: number) => void
 }
 
-const CellItem = styled.div`
+export const CellItem = styled.div`
   background-color: #00d0ff;
   padding: 10px;
   width: 15px;

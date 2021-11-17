@@ -31,10 +31,10 @@ export const Grid: FC<GridProps> = ({ x, y, onClick }: GridProps) => {
       cellCounter++
     }
   }
-  return <Wrapper>{matrix}</Wrapper>
+  return <Wrapper role="wrapper">{matrix}</Wrapper>
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(10, auto);
   width: max-content;
