@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
-import { Cell, CellItem } from './Cell'
+import { Cell } from './Cell'
 
 describe('Render CellItem', () => {
   test('Renders CellItem component', () => {
@@ -8,6 +8,7 @@ describe('Render CellItem', () => {
       <Cell
         x={0}
         y={0}
+        data-testid={''}
         cellId={''}
         cellNumber={0}
         aliveColor={''}
@@ -21,9 +22,4 @@ describe('Render CellItem', () => {
     screen.debug()
     expect(screen.getByRole('CellItem')).toBeInTheDocument()
   })
-  // test('cell should call callback', () => {
-  //   const onClick = jest.fn()
-  //   fireEvent.click(screen.getByRole('CellItem'))
-  //   expect(onClick).toHaveBeenCalledTimes(1)
-  // })
 })
