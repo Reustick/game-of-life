@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Grid } from '@/components/Grid'
+import { DescriptionOfRules } from '@/components/DescriptionOfRules'
 
 export const App = () => {
   const [selectCell, setSelectCell] = useState({ x: 0, y: 0 })
@@ -18,6 +19,7 @@ export const App = () => {
         Выбрана ячейка с координатами:{' '}
         {`x: ${selectCell.x + 1}, y: ${selectCell.y + 1}`}
       </div>
+      <DescriptionOfRules />
     </div>
   )
 }
