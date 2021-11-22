@@ -13,11 +13,10 @@ export interface CellProps {
 }
 
 export const CellItem = styled.div`
-  background-color: #00d0ff;
-  padding: 10px;
-  width: 15px;
-  height: 15px;
-  border: 1px solid white;
+  background-color: #000;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #333;
 `
 
 export const Cell: FC<CellProps> = ({
@@ -33,8 +32,6 @@ export const Cell: FC<CellProps> = ({
       id={cellId}
       onClick={() => onClick(x, y)}
       role="CellItem"
-    >
-      {cellNumber}
-    </CellItem>
+    ></CellItem>
   )
 }

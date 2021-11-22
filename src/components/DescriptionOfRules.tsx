@@ -2,6 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Description = styled.div`
+  display: flex;
+  flex-direction: column;
   background: #333;
   margin: 20px auto;
   padding: 20px;

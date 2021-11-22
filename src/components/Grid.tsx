@@ -36,7 +36,7 @@ export const Grid: FC<GridProps> = ({ x, y, onClick }: GridProps) => {
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(50, auto);
   width: max-content;
   padding: 1vw;
   margin: 0 auto;
