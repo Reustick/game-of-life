@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import { Grid } from '@/components/Grid'
 import { DescriptionOfRules } from '@/components/DescriptionOfRules'
 import styled from '@emotion/styled'
+import { ControlMenu } from '@/components/ControlMenu'
+import { GenerationCounter } from '@/components/GenerationCounter'
 
 const AppBody = styled.div`
   background-image: radial-gradient(#c44, #111);
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 export const App = () => {
@@ -21,11 +24,13 @@ export const App = () => {
 
   return (
     <AppBody role="app">
+      <ControlMenu />
       <Grid x={rows} y={columns} onClick={cl} />
       <div>
         Выбрана ячейка с координатами:{' '}
         {`x: ${selectCell.x + 1}, y: ${selectCell.y + 1}`}
       </div>
+      <GenerationCounter />
       <DescriptionOfRules />
     </AppBody>
   )
