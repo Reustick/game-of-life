@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import { Grid } from '@/components/Grid'
+import { Grid } from 'components/Field/Grid'
 
 describe('Render wrapper', () => {
   test('renders wrapper component', () => {

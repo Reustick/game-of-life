@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Grid } from '@/components/Grid'
-import { DescriptionOfRules } from '@/components/DescriptionOfRules'
+import { Grid } from 'components/Field/Grid'
+import { DescriptionOfRules } from 'components/Top/DescriptionOfRules'
 import styled from '@emotion/styled'
-import { ControlMenu } from '@/components/ControlMenu'
-import { GenerationCounter } from '@/components/GenerationCounter'
+import { ControlMenu } from 'components/Top/ControlMenu'
+import { GenerationCounter } from 'components/Top/GenerationCounter'
 
 const AppBody = styled.div`
   background-image: radial-gradient(#c44, #111);

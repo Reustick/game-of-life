@@ -2,7 +2,7 @@ import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 
 import { App } from './App'
-import { CellItem } from '@/components/Cell'
+import { CellItem } from 'components/Field/Cell'
 
 describe('App', () => {
   const onClick = jest.fn()
